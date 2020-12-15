@@ -1,7 +1,7 @@
 <template>
   <div :class="classObj" class="app-wrapper">
     <div class="main-container">
-      <div class="wuyi-header">DFS监控系统</div>
+      <div class="wuyi-header">DFS监控系统(第8组汇报成果)</div>
       <app-main />
     </div>
   </div>

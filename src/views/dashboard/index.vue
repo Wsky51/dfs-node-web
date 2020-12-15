@@ -4,7 +4,7 @@
         <el-col :span="24">
           <el-card class="box-card">
             <div slot="header" style="width: 100%;" class="clearfix">
-              <span>Hadop分布式系统</span>
+              <span>DFS实时监控状态图</span>
             </div>
             <v-chart :options="option" style="width: 100%"  id='chart'/>
           </el-card>
@@ -78,7 +78,7 @@ export default {
     this.option.tooltip.formatter = function(data) {
         var time = data[0]['axisValue']
         var html = '<p>' + time + '</p><table class="table b-table table-striped table-hover table-sm">'
-        html+='<thead><th><td>DataNodeName</td> <td>CpuCore</td> <td>dfs_used</td> <td>freeMem</td> <td>mem_prop</td> <td>totalMem</td> <td>pid</td></thead>'
+        html+='<thead><th><td>DataNodeName</td> <td>CpuCore</td> <td>DfsUsed</td> <td>FreeMem</td> <td>MemProp</td> <td>TotalMem</td> <td>pid</td></thead>'
         html+= '<tbody>'
         for(var i=0; i< data.length; i++) {
           var dataIndex = data[i]['dataIndex']
@@ -88,7 +88,7 @@ export default {
           html+="<td></td>"
           html+="<td>" + metadata.host + "</td>"
           html+="<td>" + metadata.cpu_core + "</td>"
-          html+="<td>" + metadata.dfs_used + "</td>"
+          html+="<td>" + metadata.dfs_used+ "B" + "</td>"
           html+="<td>" + metadata.freeMem + "</td>"
           html+="<td>" + metadata.mem_prop + "</td>"
           html+="<td>" + metadata.totalMem + "</td>"

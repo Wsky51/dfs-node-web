@@ -25,6 +25,8 @@ export const option = {
         data: []
     },
     yAxis: {
+        min:0,
+        max:100,
         type: 'value'
     },
     series: [
